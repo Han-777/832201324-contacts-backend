@@ -11,22 +11,24 @@ public class ResponseMessage<T> {
         this.code = code;
         this.message = message;
         this.data = data;
-
     }
 
-    // 接口请求成功
+    // Success with data
     public static <T> ResponseMessage<T> success(T data) {
         return new ResponseMessage<>(HttpStatus.OK.value(), "success", data);
     }
 
+    // Success without data
     public static <T> ResponseMessage<T> success() {
         return new ResponseMessage<>(HttpStatus.OK.value(), "success", null);
     }
 
+    // Error response
     public static <T> ResponseMessage<T> error(Integer code, String message, T data) {
         return new ResponseMessage<>(code, message, data);
     }
 
+    // Getters and Setters
     public Integer getCode() {
         return code;
     }
@@ -39,15 +41,15 @@ public class ResponseMessage<T> {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(String message){
         this.message = message;
     }
 
-    public T getData() {
+    public T getData(){
         return data;
     }
 
-    public void setData(T data) {
+    public void setData(T data){
         this.data = data;
     }
 }

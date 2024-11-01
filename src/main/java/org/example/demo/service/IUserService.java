@@ -2,6 +2,8 @@ package org.example.demo.service;
 
 import org.example.demo.pojo.User;
 import org.example.demo.pojo.dto.UserDto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -43,4 +45,8 @@ public interface IUserService {
      * @return
      */
     List<User> getAll();
+
+
+    Page<User> getAll(Pageable pageable, String search);
+
 }

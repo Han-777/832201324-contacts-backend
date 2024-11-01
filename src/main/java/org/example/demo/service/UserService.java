@@ -5,6 +5,8 @@ import org.example.demo.pojo.dto.UserDto;
 import org.example.demo.repository.UserRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,5 +49,15 @@ public class UserService implements IUserService {
     public List<User> getAll() {
         return (List<User>) userRepository.findAll();
     }
+
+    @Override
+    public Page<User> getAll(Pageable pageable, String search) {
+        if (search == null || search.trim().isEmpty()) {
+            return userRepository.findAll(pageable);
+        }
+        return userRepository.findByUserNameContainingIgnoreCaseOrUserEmailContainingIgnoreCaseOrUserPhoneContainingIgnoreCase(
+                search, search, search, pageable);
+    }
+
 
 }
