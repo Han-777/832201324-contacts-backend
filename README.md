@@ -1,17 +1,15 @@
-
-
 # User Management Backend
 
 This project is a Spring Boot-based backend application for managing user data. It provides RESTful APIs to perform CRUD (Create, Read, Update, Delete) operations on user entries, allowing easy integration with frontend applications.
 
-## Features
+## 🧐 Features
 
 - **User Management**: Add, retrieve, update, and delete user information.
 - **Validation**: Input validation for user data to ensure integrity.
 - **Exception Handling**: Global exception handling for better error management.
 - **Cross-Origin Resource Sharing (CORS)**: Enables cross-origin requests for client applications.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Spring Boot
 - Spring Data JPA
@@ -19,7 +17,7 @@ This project is a Spring Boot-based backend application for managing user data. 
 - Lombok (for reducing boilerplate code)
 - H2 Database (or any other database of your choice)
 
-## Installation
+## 💻 Installation
 
 ### Prerequisites
 
@@ -49,24 +47,28 @@ mvn spring-boot:run
 
 The application will start on `http://localhost:8080`.
 
-## API Endpoints
+## 📄 API Endpoints
 
 ### User Management API
 
 - **Create User**
+
   - **Endpoint**: `POST /user`
   - **Request Body**: `UserDto` (username, email, phone)
   - **Response**: User object
 
 - **Get User by ID**
+
   - **Endpoint**: `GET /user/{id}`
   - **Response**: User object
 
 - **Get All Users**
+
   - **Endpoint**: `GET /user`
   - **Response**: List of User objects
 
 - **Update User**
+
   - **Endpoint**: `PUT /user`
   - **Request Body**: `UserDto` (userId, username, email, phone)
   - **Response**: Updated User object
@@ -90,19 +92,19 @@ Content-Type: application/json
 }
 ```
 
-## Exception Handling
+## 🚀 Exception Handling
 
 The application has global exception handling that captures validation errors and other runtime exceptions, returning structured error responses.
 
-## Database
+## 📫 Database
 
 This project is configured to work with H2 database (in-memory). You can modify the `application.properties` file to connect to other databases like MySQL or PostgreSQL.
 
-## License
+## 👨‍💻 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Acknowledgements
+## 🤝 Acknowledgements
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
