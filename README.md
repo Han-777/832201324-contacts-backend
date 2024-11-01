@@ -100,10 +100,6 @@ The application has global exception handling that captures validation errors an
 
 This project is configured to work with H2 database (in-memory). You can modify the `application.properties` file to connect to other databases like MySQL or PostgreSQL.
 
-## 👨‍💻 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 ## 🤝 Acknowledgements
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
